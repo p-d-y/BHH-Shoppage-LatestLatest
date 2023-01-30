@@ -224,24 +224,29 @@ ul li {
     width: 95%;
     height: 150px;
     margin-left: 15px;
+
 }
 
 
 .reviews{
     background-color: rgba(245,245,245,255);
+    cursor: pointer;
 }
 
 .reviewsWhite{
     background-color: white;
+    cursor: pointer;
 }
 
 
 .writeReviews{
     background-color: rgba(245,245,245,255);
+    cursor: pointer;
 }
 
 
 .writeReviewsWhite{
     background-color: white;
+    cursor: pointer;
 }
 </style>
