@@ -3,7 +3,7 @@
 
         <div class="cointainer">
             <div class="products" @click="router.push(`/product/${product.id}`)" v-for="product in products" :key="product">
-                <img src="../assets/hoodie0.jpg" alt="">
+                <img :src="product.url" alt="">
                 <div class="bottom">
 
                     <p>{{ product.name }}</p>
@@ -46,7 +46,7 @@ const router = useRouter()
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
 
@@ -73,6 +73,7 @@ font-family: century gothic;
 text-align: center;
 margin: 10px 0;
 font-size: larger;
+font-weight: bold;
 }
 
 .bottom{

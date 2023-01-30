@@ -21,7 +21,7 @@ console.log(route.params)
     <main>
         <div class="container">
             <div class="productContainer">
-                <img src="../assets/hoodie0.jpg" alt="">
+                <img :src="product.url" alt="">
                 <div class="productInfo">
                     <h1>{{ product.name }}</h1>
                     <div class="stock">

@@ -6,25 +6,28 @@
         "inStockS": true,
         "inStockL": false,
         "color": "Black",
-        "preis": "36,54€"
+        "preis": "59,99€",
+        "url":"https://peppermint-anime.de/wp-content/uploads/2021/06/Haikyu_S4_01_DE_HD-0418-e1644925191879.jpg"
     },
     {
         "id": 2,
-        "name": "BHH Hoodie",
+        "name": "BHH Grey Hoodie",
         "inStockM": false,
         "inStockS": true,
         "inStockL": false,
-        "color": "Purple",
-        "preis": "65,87€"
+        "color": "Grey",
+        "preis": "59,99€",
+        "url":"../src/assets/hoodie0.jpg"
     },
     {
         "id": 3,
-        "name": "BHH Sweater",
+        "name": "BHH Loos Sweater",
         "inStockM": true,
         "inStockS": false,
         "inStockL": true,
-        "color": "Pink",
-        "preis": "35,54€"
+        "color": "Brown",
+        "preis": "39,99€",
+        "url":"../src/assets/hoodie1.jpg"
     },
     {
         "id": 4,
@@ -32,43 +35,48 @@
         "inStockM": true,
         "inStockS": true,
         "inStockL": true,
-        "color": "Yellow",
-        "preis": "15,99€"
+        "color": "Red",
+        "preis": "15,99€",
+        "url":"../src/assets/hoodie8.jpg"
     },
     {
         "id": 5,
-        "name": "BHH Hat",
+        "name": "BHH Black Hoodie ",
         "inStockM": true,
         "inStockS": false,
         "inStockL": false,
-        "color": "Green",
-        "preis": "28,25€"
+        "color": "Black",
+        "preis": "59,99€",
+        "url":"../src/assets/hoodie2.jpg"
     },
     {
         "id": 6,
-        "name": "BHH T-Shirt",
+        "name": "BHH Blue Hoodie",
         "inStockM": true,
         "inStockS": true,
         "inStockL": true,
-        "color": "Yellow",
-        "preis": "15,99€"
+        "color": "Blue",
+        "preis": "59,99€",
+        "url":"../src/assets/hoodie3.jpg"
     },
     {
         "id": 7,
-        "name": "BHH Hat",
+        "name": "BHH Loose Sweater",
         "inStockM": true,
         "inStockS": false,
         "inStockL": false,
-        "color": "Green",
-        "preis": "28,25€"
+        "color": "Orange",
+        "preis": "35,45€",
+        "url":"../src/assets/hoodie6.jpg"
     },
     {
         "id": 8,
-        "name": "BHH Hat",
+        "name": "BHH Brown Hoodie",
         "inStockM": true,
         "inStockS": false,
         "inStockL": false,
-        "color": "Green",
-        "preis": "28,25€"
+        "color": "Brown",
+        "preis": "59,99€",
+        "url":"../src/assets/hoodie7.jpg"
     }
 ]
