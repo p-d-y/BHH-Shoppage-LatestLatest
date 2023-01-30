@@ -24,40 +24,7 @@
 
 
       <div class="content">
-              <div class="HomeUberschrift">
-
-              <p id="HomeUberschrifP">Entdecke deinen beruflichen Style an der Beruflichen Hochschule Hamburg!</p>
-
-          </div>
-
-          <div class="ProductFrame">
-
-              <div class="Product">
-
-                  <img  class="Productimg" src="../assets/hoodie1.jpg" alt="">
-                  <div class="Producttxt"><p>Super Cool Hooddie</p></div>
-              </div>
-
-                <div class="Product">
-
-                  <img  class="Productimg" src="../assets/hoodie1.jpg" alt="">
-                  <div class="Producttxt"><p>Super Cool Hooddie</p></div>
-              </div>
-
-
-                     <div class="Product">
-
-                  <img  class="Productimg" src="../assets/hoodie1.jpg" alt="">
-                  <div class="Producttxt"><p>Super Cool Hooddie</p></div>
-              </div>
-
-
-                   <div class="Product">
-
-                  <img  class="Productimg" src="../assets/hoodie1.jpg" alt="">
-                  <div class="Producttxt"><p>Super Cool Hooddie</p></div>
-              </div>
-          </div>
+              <div class="HomeUberschrift"> Entdecke deinen beruflichen Style an der Beruflichen Hochschule Hamburg!</div>
 
       </div>
 
@@ -157,23 +124,16 @@ export default {
 .HomeUberschrift {
 
   text-align: center;
-  width: 100%;
-  height: 150px;
   font-family: century gothic;
   font-weight: bolder;
   font-size: 25px;
-  align-content: center;
-  background-color: white;
-  color: blakc;
-
-
-}
-
-.HomeUberschrift p {
-  padding-top: 50px;
-
+  color: black;
+  background-color: rgba(245,245,245,255);
+  padding: 50px;
 
 }
+
+
 
 
 .content{

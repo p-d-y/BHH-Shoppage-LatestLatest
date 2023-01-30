@@ -48,10 +48,19 @@ console.log(route.params)
             <div class="productReview">
                 <div class="reviewNav">
                     <div class="reviews" @click="openReview()" :class="{reviewsWhite: reviewOpen==false}">Reviews</div>
-                    <div class="writeReviewsWhite"  @click="openWriteReview()" :class="{writeReviews: writeReview==true}">Write Reviews</div>
+                    <div class="writeReviewsWhite"  @click="openWriteReview()" :class="{writeReviewClass: writeReview==true}">Write Reviews</div>
                 </div>
 
-                <div class="reviewContent"></div>
+
+                <div class="reviewContant" v-if="reviewOpen==true">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla odio luctus purus mattis vestibulum. Duis vel nulla a lectus pretium euismod.
+                     Nunc convallis ultricies risus ut sodales. Nulla molestie magna ut nunc facilisis pharetra. Fusce blandit lobortis dolor, sed pellentesque sapien posuere a. Aliquam erat volutpat. 
+                </div>
+
+                <div class="writeReviewContent" v-if="writeReview==true">
+                    <input type="text">
+
+                </div>
             </div>
 
 
@@ -96,7 +105,7 @@ export default {
         },
       
         openWriteReview(){
-            this.writeReview =true
+            this.writeReview = true
             this.reviewOpen = false
             console.log(this.writeReview)
         },
@@ -126,6 +135,8 @@ export default {
     margin-top: 75px;
     height: auto;
     /* border: solid black 1px; */
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -148,6 +159,9 @@ export default {
     /* border: solid rgb(255, 9, 22) 1px; */
     width: 300px;
     margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+    
 
 }
 
@@ -218,8 +232,14 @@ ul li {
     padding: 15px;
 }
 
+.reviewContant{
+    background-color: rgba(245,245,245,255);
+    width: 95%;
+    height: 150px;
+    margin-left: 15px;
+}
 
-.reviewContent{
+.writeReviewContent{
     background-color: rgba(245,245,245,255);
     width: 95%;
     height: 150px;
@@ -239,14 +259,21 @@ ul li {
 }
 
 
-.writeReviews{
-    background-color: rgba(245,245,245,255);
-    cursor: pointer;
-}
-
-
 .writeReviewsWhite{
     background-color: white;
     cursor: pointer;
 }
+.writeReviewClass{
+    background-color: rgba(245,245,245,255);
+  
+
+   
+}
+
+input {
+    height: 80%;
+    width: 95%;
+    margin: 15px;
+}
+
 </style>
