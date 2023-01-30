@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "BHH Pullover",
+        "inStockM": true,
+        "inStockS": true,
+        "inStockL": false,
+        "color": "Black",
+        "preis": "36,54€"
+    },
+    {
+        "id": 2,
+        "name": "BHH Hoodie",
+        "inStockM": false,
+        "inStockS": true,
+        "inStockL": false,
+        "color": "Purple",
+        "preis": "65,87€"
+    },
+    {
+        "id": 3,
+        "name": "BHH Sweater",
+        "inStockM": true,
+        "inStockS": false,
+        "inStockL": true,
+        "color": "Pink",
+        "preis": "35,54€"
+    },
+    {
+        "id": 4,
+        "name": "BHH T-Shirt",
+        "inStockM": true,
+        "inStockS": true,
+        "inStockL": true,
+        "color": "Yellow",
+        "preis": "15,99€"
+    },
+    {
+        "id": 5,
+        "name": "BHH Hat",
+        "inStockM": true,
+        "inStockS": false,
+        "inStockL": false,
+        "color": "Green",
+        "preis": "28,25€"
+    },
+    {
+        "id": 6,
+        "name": "BHH T-Shirt",
+        "inStockM": true,
+        "inStockS": true,
+        "inStockL": true,
+        "color": "Yellow",
+        "preis": "15,99€"
+    },
+    {
+        "id": 7,
+        "name": "BHH Hat",
+        "inStockM": true,
+        "inStockS": false,
+        "inStockL": false,
+        "color": "Green",
+        "preis": "28,25€"
+    },
+    {
+        "id": 8,
+        "name": "BHH Hat",
+        "inStockM": true,
+        "inStockS": false,
+        "inStockL": false,
+        "color": "Green",
+        "preis": "28,25€"
+    }
+]
