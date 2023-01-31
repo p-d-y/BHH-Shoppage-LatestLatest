@@ -52,9 +52,11 @@ console.log(route.params)
                 </div>
 
 
-                <div class="reviewContant" v-if="reviewOpen==true">
+                <div class="reviewContant" v-if="reviewOpen==true"><p style="padding: 10px; overdlow-y: scroll">
+
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla odio luctus purus mattis vestibulum. Duis vel nulla a lectus pretium euismod.
                      Nunc convallis ultricies risus ut sodales. Nulla molestie magna ut nunc facilisis pharetra. Fusce blandit lobortis dolor, sed pellentesque sapien posuere a. Aliquam erat volutpat. 
+                </p>
                 </div>
 
                 <div class="writeReviewContent" v-if="writeReview==true">
@@ -137,6 +139,7 @@ export default {
     /* border: solid black 1px; */
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
 }
 
@@ -150,17 +153,20 @@ export default {
 
 .productContainer img {
     height: 100%;
-    width: auto;
+    max-width: 440px;
     /* border: solid black 1px; */
     box-shadow: 1px 1px 2px;
+
 }
 
 .productInfo {
     /* border: solid rgb(255, 9, 22) 1px; */
     width: 300px;
-    margin: 0 60px;
+    margin-left: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     
 
 }
@@ -265,6 +271,7 @@ ul li {
 }
 .writeReviewClass{
     background-color: rgba(245,245,245,255);
+
   
 
    
