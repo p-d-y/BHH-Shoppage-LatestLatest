@@ -30,11 +30,9 @@
 
 
       <footer>
-          <div class="FooterFrame">
+          
 
 
-
-          </div>
 
 
       </footer>
@@ -187,14 +185,6 @@ export default {
 
 
 
-
-
-.FooterFrame{
-
-  width: 100%;
-  height: 300px;
-  background-color: white;
-}
 
 
 
