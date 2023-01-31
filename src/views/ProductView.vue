@@ -145,7 +145,7 @@ export default {
 
 
 .productContainer {
-    height: 600px;
+    height: auto;
     display: flex;
     /* justify-content: space-between; */
     flex-wrap: wrap;
@@ -161,7 +161,7 @@ export default {
 
 .productInfo {
     /* border: solid rgb(255, 9, 22) 1px; */
-    width: 300px;
+    width: auto;
     margin-left: 50px;
     margin-top: 20px;
     display: flex;
