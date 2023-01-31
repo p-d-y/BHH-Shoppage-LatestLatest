@@ -15,7 +15,7 @@ import TopInfo from "./components/TopInfo.vue"
         
         <nav class="navbar">
             <div class="logo">
-                <img class="bhhLogo" src="./assets/logoBHH.png" alt="nope">
+                <img class="bhhLogo" src="./assets/BigLogoOnlay.png" alt="nope">
             </div>
             
             <div class="hamburger">
@@ -112,9 +112,10 @@ export default{
 
 .bhhLogo {
     height: 100%;
-    width: 100px;
+    width: 90px;
     margin-left: 15px;
-    border-radius: 12px;
+    
+
     cursor: pointer;
 }
 

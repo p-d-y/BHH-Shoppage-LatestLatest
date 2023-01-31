@@ -40,7 +40,7 @@ const router = useRouter()
 }
 .topBar{
     background-color: rgba(245,245,245,255);
-    padding: 50px;
+    padding: 30px;
     font-weight: bolder;
     text-align: center;
     font-size: 23px;

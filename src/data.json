@@ -1,35 +1,35 @@
 [
     {
         "id": 1,
-        "name": "BHH Pullover",
+        "name": "BHH T-shirt in Blau",
         "inStockM": true,
         "inStockS": true,
         "inStockL": false,
-        "color": "Black",
-        "preis": "59,99€",
-        "url":"https://peppermint-anime.de/wp-content/uploads/2021/06/Haikyu_S4_01_DE_HD-0418-e1644925191879.jpg"
+        "color": "Blau",
+        "preis": "25€",
+        "url":"../src/assets/t-shirtBlau.jpg"
     },
     {
         "id": 2,
-        "name": "BHH Grey Hoodie",
+        "name": "BHH T-shirt in DunkelGrün  ",
         "inStockM": false,
         "inStockS": true,
         "inStockL": false,
-        "color": "Grey",
+        "color": "Dunkel Grün",
         "preis": "59,99€",
-        "url":"../src/assets/hoodie0.jpg"
+        "url":"../src/assets/t-shirtDunkelGrün.jpg"
 
         
     },
     {
         "id": 3,
-        "name": "BHH Loos Sweater",
+        "name": "BHH T-shirt in Weiß",
         "inStockM": true,
         "inStockS": false,
         "inStockL": true,
-        "color": "Brown",
+        "color": "Weiß",
         "preis": "39,99€",
-        "url":"../src/assets/hoodie1.jpg"
+        "url":"../src/assets/t-shirtWeiß.jpg"
     },
     {
         "id": 4,

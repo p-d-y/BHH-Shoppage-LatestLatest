@@ -19,6 +19,7 @@ console.log(route.params)
 
 <template>
     <main>
+        <div class="topBar">BHH-Shop</div>
         <div class="container">
             <div class="productContainer">
                 <img :src="product.url" alt="">
@@ -129,6 +130,17 @@ export default {
     font-size: 23px;
     font-family: century Gothic;
 
+}
+
+.topBar{
+    background-color: rgba(245,245,245,255);
+    padding: 30px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 23px;
+    font-family: century Gothic;
+    border-top: black 5px solid;
+    
 }
 
 .container {
