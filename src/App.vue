@@ -3,9 +3,6 @@ import { RouterLink, RouterView } from 'vue-router'
 import TopInfo from "./components/TopInfo.vue"
 
 
-
-
-
 </script>
 
 <template>
@@ -29,7 +26,7 @@ import TopInfo from "./components/TopInfo.vue"
                     <li class="liN">
                         <RouterLink to="/shop" class="normal" style="cursor:pointer"  :class="{active: $route.name==='shop'}">Shop</RouterLink></li>
                     <li class="liN">    <RouterLink to="/profile" class="normal" style="cursor:pointer"  :class="{active: $route.name==='profile'}">Profile</RouterLink></li>
-                    <li class="liN"><a  class="normal" :class="{active: openProduct==true}" @click="$emit('openProduct')" style="cursor:pointer">Contact</a></li>
+                    <li class="liN"><a  class="normal" :class="{active: openProduct==true}" @click="api_get_products()" style="cursor:pointer">Contact</a></li>
                     <li class="liN"><a class="normal" v-bind:href="test">{{ navFive }}</a></li>
                     
                 </ul>
@@ -46,47 +43,70 @@ import TopInfo from "./components/TopInfo.vue"
 
 
 <script>
+
 export default{
 
 
     data(){
         return{
-            isActiveHome: true,
-            isActiveShop: false,
-            isActiveProfile: false,
-            isActiveContact: false,
-
+            result: String
         }
     },
-
     methods:{
-        activeNavBarHome(){
-            this.isActiveHome = !this.isActiveHome
-            this.isActiveShop = false
-            this.isActiveProfile = false
-
-
+        saveFile: function() {
+            const data = JSON.stringify(this.arr)
+            window.localStorage.setItem('arr', data);
+            console.log(JSON.parse(window.localStorage.getItem('arr')))
         },
-        activeNavBarShop(){
-            this.isActiveShop = !this.isActiveShop
-            this.isActiveHome = false
-          
-            this.isActiveProfile = false
-
+        test(){
+            this.responseAvailable = false;
+            fetch("http://127.0.0.1:7777/api/test", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "jokes-database.p.rapidapi.com",
+                    "x-rapidapi-key": this.apiKey
+                }
+            })
+            .then(response => { 
+                if(response.ok){
+                    return response.json()    
+                } else{
+                    alert("Server returned " + response.status + " : " + response.statusText);
+                }                
+            })
+            .then(response => {
+                this.result = response.body;
+                this.responseAvailable = true;
+            })
+            .catch(err => {
+                console.log(err);
+            });
         },
-        activeNavBarProfile(){
-            this.isActiveProfile = !this.isActiveProfile
-            this.isActiveHome = false
-            this.isActiveShop = false
-            
-
-        },
-        activeNavBarContact(){
-            this.isActiveContact = !this.isActiveContact
-            this.isActiveHome = false
-            this.isActiveShop = false
-            this.isActiveProfile = false
-
+        api_get_products(){
+            this.responseAvailable = false;
+            fetch("http://127.0.0.1:7777/api/product", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "jokes-database.p.rapidapi.com",
+                    "x-rapidapi-key": this.apiKey
+                }
+            })
+            .then(response => { 
+                if(response.ok){
+                    return response.json()    
+                } else{
+                    alert("Server returned " + response.status + " : " + response.statusText);
+                }                
+            })
+            .then(response => {
+                this.result = response.body;
+                this.data = JSON.stringify(this.result)
+                window.localStorage.setItem('test', this.data);
+                this.responseAvailable = true;
+            })
+            .catch(err => {
+                console.log(err);
+            });
         }
     }
 

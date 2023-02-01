@@ -3,7 +3,7 @@
         <div class="topBar">Neuheiten</div>
         <div class="cointainer">
 
-            <WarenkorbView @click="router.push(`/product/${product.id}`)" v-for="product in products" :key="product" 
+            <WarenkorbView @click="router.push(`/product/${product._id.$oid}`)" v-for="product in products" :key="product" 
                 :product="product"/>
         </div>
               
@@ -17,14 +17,10 @@
 
 
 <script setup> 
-import data from "../data.json"
-import {ref} from "vue"
 import { useRouter } from "vue-router";
+import {ref, onBeforeMount} from "vue"
 
-const products = ref(data)
 const router = useRouter()
-
-
 
 </script>
 
@@ -32,12 +28,45 @@ const router = useRouter()
 import WarenkorbView from "../components/WarenkorbView.vue"
 
 
-
 export default{
     components:{WarenkorbView},
     data(){
         return{
-            product: ""
+            product: "",
+            products: []
+        }
+    },
+    mounted(){
+        fetch('http://127.0.0.1:7777/api/product')
+        .then(res => res.json())
+        .then(data => this.products = data)
+        .catch(err => console.log(err))
+    },
+
+    methods:{
+        api_get_products(){
+            this.responseAvailable = false;
+            fetch("http://127.0.0.1:7777/api/product", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "jokes-database.p.rapidapi.com",
+                    "x-rapidapi-key": this.apiKey
+                }
+            })
+            .then(response => { 
+                if(response.ok){
+                    return response.json()    
+                } else{
+                    alert("Server returned " + response.status + " : " + response.statusText);
+                }                
+            })
+            .then(response => {
+                this.result = response.body;
+                this.responseAvailable = true;
+            })
+            .catch(err => {
+                console.log(err);
+            })
         }
     }
 }
