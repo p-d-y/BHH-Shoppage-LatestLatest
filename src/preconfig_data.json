@@ -1,0 +1,604 @@
+{"Product":  [{
+  "type": "regular",
+  "size": "small",
+  "color": "black",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 14.00
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 17.00
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.90
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "black",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.99
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "white",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "white",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "red",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "red",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "red",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "red",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "blue",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "blue",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "blue",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "blue",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "green",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "green",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "green",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "green",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "small",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "medium",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "large",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "extra_large",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "small",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "medium",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "large",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "slim_fit",
+  "size": "extra_large",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "small",
+  "color": "red",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "medium",
+  "color": "red",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "large",
+  "color": "red",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "extra_large",
+  "color": "red",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "small",
+  "color": "yellow",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "medium",
+  "color": "yellow",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "large",
+  "color": "yellow",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "extra_large",
+  "color": "yellow",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "small",
+  "color": "black",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "medium",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "large",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "extra_large",
+  "color": "black",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "small",
+  "color": "white",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "medium",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "large",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "extra_large",
+  "color": "white",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},
+{
+  "type": "women",
+  "size": "small",
+  "color": "blue",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "medium",
+  "color": "blue",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "large",
+  "color": "blue",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "women",
+  "size": "extra_large",
+  "color": "blue",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 15.00
+},{
+  "type": "polo",
+  "size": "small",
+  "color": "red",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "medium",
+  "color": "red",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "large",
+  "color": "red",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "extra_large",
+  "color": "red",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "small",
+  "color": "black",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "medium",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "large",
+  "color": "black",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "extra_large",
+  "color": "black",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "small",
+  "color": "white",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "medium",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "large",
+  "color": "white",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "extra_large",
+  "color": "white",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "small",
+  "color": "blue",
+  "amount": 7,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "medium",
+  "color": "blue",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "large",
+  "color": "blue",
+  "amount": 4,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "polo",
+  "size": "extra_large",
+  "color": "blue",
+  "amount": 5,
+  "product": "t-shirt",
+  "price": 19.90
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "black",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "black",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "black",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "black",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "white",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "white",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "white",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "white",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "blue",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "blue",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "blue",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "blue",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "small",
+  "color": "red",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "medium",
+  "color": "red",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "large",
+  "color": "red",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+},{
+  "type": "regular",
+  "size": "extra_large",
+  "color": "red",
+  "amount": 4,
+  "product": "hoodie",
+  "price": 39.90
+}],
+	"Supplier": [{
+  "_id": {
+    "$oid": "63ce8eca6f3900c370bd88ec"
+  },
+  "supplier_id": {
+    "$numberLong": "9876543210"
+  },
+  "company_name": "T-Shirt Guys",
+  "address": {
+    "street": "Validername 69",
+    "postal_code": "22999",
+    "city": "Hamburg"
+  },
+  "contact": {
+    "email": "info@shirtguys.de",
+    "telephone": "040-6644223-0",
+    "fax": "040-6644223-2"
+  },
+  "contact_person": [
+    {
+      "name": {
+        "first": "Axel",
+        "last": "Senine"
+      },
+      "contact": {
+        "email": "a.senine@shirtguys.de",
+        "telephone": "040-6644223-11"
+      }
+    },
+    {
+      "name": {
+        "first": "Hans",
+        "last": "Petersen"
+      },
+      "contact": {
+        "email": "h.petersen@shirtguys.de",
+        "telephone": "040-6644223-13"
+      }
+    }
+  ]
+}]
+}

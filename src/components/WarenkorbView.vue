@@ -6,8 +6,8 @@
                 <img :src="product.url" alt="">
                 <div class="bottom">
 
-                    <p>{{product.name}}</p>
-                    <p>{{product.preis}}</p>
+                    <p>{{product.product}}</p>
+                    <p>{{formatter.format(product.price)}}</p>
                     
                 </div>
             </div>
@@ -16,6 +16,16 @@
        
 
 </template>
+
+<script setup> 
+
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'EUR'
+});
+
+</script>
+
 
 <script>
 
@@ -76,9 +86,4 @@ font-weight: bold;
     border-top: 1px black solid;
 }
 
-
-.WarenkorbInfo{
-
-
-}
 </style>

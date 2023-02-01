@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import TopInfo from "./components/TopInfo.vue"
+import preconfig from "./preconfig_data.json"
 
 
 </script>
@@ -26,7 +27,7 @@ import TopInfo from "./components/TopInfo.vue"
                     <li class="liN">
                         <RouterLink to="/shop" class="normal" style="cursor:pointer"  :class="{active: $route.name==='shop'}">Shop</RouterLink></li>
                     <li class="liN">    <RouterLink to="/profile" class="normal" style="cursor:pointer"  :class="{active: $route.name==='profile'}">Profile</RouterLink></li>
-                    <li class="liN"><a  class="normal" :class="{active: openProduct==true}" @click="api_get_products()" style="cursor:pointer">Contact</a></li>
+                    <li class="liN"><a  class="normal" :class="{active: openProduct==true}" @click="populate()" style="cursor:pointer">Contact</a></li>
                     <li class="liN"><a class="normal" v-bind:href="test">{{ navFive }}</a></li>
                     
                 </ul>
@@ -58,56 +59,17 @@ export default{
             window.localStorage.setItem('arr', data);
             console.log(JSON.parse(window.localStorage.getItem('arr')))
         },
-        test(){
-            this.responseAvailable = false;
-            fetch("http://127.0.0.1:7777/api/test", {
-                "method": "GET",
+        populate(){
+            fetch("https://api.bhhshop.bembel.dev/api/populate", {
+                "method": "POST",
                 "headers": {
-                    "x-rapidapi-host": "jokes-database.p.rapidapi.com",
-                    "x-rapidapi-key": this.apiKey
+                    "Content-Type": 'json'
+                },
+                body: {
+                    json_data: preconfig
                 }
             })
-            .then(response => { 
-                if(response.ok){
-                    return response.json()    
-                } else{
-                    alert("Server returned " + response.status + " : " + response.statusText);
-                }                
-            })
-            .then(response => {
-                this.result = response.body;
-                this.responseAvailable = true;
-            })
-            .catch(err => {
-                console.log(err);
-            });
         },
-        api_get_products(){
-            this.responseAvailable = false;
-            fetch("http://127.0.0.1:7777/api/product", {
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "jokes-database.p.rapidapi.com",
-                    "x-rapidapi-key": this.apiKey
-                }
-            })
-            .then(response => { 
-                if(response.ok){
-                    return response.json()    
-                } else{
-                    alert("Server returned " + response.status + " : " + response.statusText);
-                }                
-            })
-            .then(response => {
-                this.result = response.body;
-                this.data = JSON.stringify(this.result)
-                window.localStorage.setItem('test', this.data);
-                this.responseAvailable = true;
-            })
-            .catch(err => {
-                console.log(err);
-            });
-        }
     }
 
 }

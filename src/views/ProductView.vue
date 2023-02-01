@@ -1,23 +1,87 @@
 <script setup>
+
 import {useRoute} from 'vue-router'
-import {ref, onBeforeMount} from "vue"
-import products from "../data.json"
 import {RouterLink} from "vue-router"
 
+</script>
+
+<script >
+
+import { useRoute } from 'vue-router'
+
+export default {
+    data() {
+        return {
+            sizeOpen: false,
+            showDropdown: false,
+            erased: "None",
+            defaultText: "Größe",
+            defaultText1: "Größe",
+            reviewOpen: true,
+            writeReview: false,
+            sizes: ["M", "L", "S"],
+            products: [],
+            product: "",
+            id: ""
+            
+        }
+    },
+    computed:{
+        productTotal(){
+            this.$store.getters.productQuantity(this.product)
+        }
+    },
+    mounted(){
+        const route = useRoute()
+        this.id= route.params.id
+        this.api_get_product()
+    },
+    methods: {
+        api_get_product(){
+            fetch('https://api.bhhshop.bembel.dev/api/product/id=' + this.id)
+                .then(res => res.json())
+                .then(data => this.products = data)
+                .catch(err => console.log(err))
+        },
+        choosedSize(size){
+            product.choosedSize = size;
+            
+        },
+
+        addToCart(){
+            this.$store.commit('addToCart', this.product)
+        },
 
 
-const product = ref(null)
-const route = useRoute()
-const {id} = route.params
 
-onBeforeMount(() => {
-     product.value = products.find(p => p.id === parseInt(id))
-})
+        openSizes() {
+            this.sizeOpen = !this.sizeOpen;
+            console.log(this.sizeOpen)
+        },
+
+        chooseSize(size){
+            this.defaultText = size;
+            this.sizeOpen = false;
 
 
+        },
+
+        openReview(){
+            this.reviewOpen =true
+            this.writeReview = false
+        },
+      
+        openWriteReview(){
+            this.writeReview = true
+            this.reviewOpen = false
+            console.log(this.writeReview)
+        },
+    }
+}
 
 
 </script>
+
 
 
 <template>
@@ -27,7 +91,7 @@ onBeforeMount(() => {
             <div class="productContainer">
                 <img :src="product.url" alt="">
                 <div class="productInfo">
-                    <h1>{{ product.name }}</h1>
+                    <h1> {{ products[0] }}  </h1>
                     <div class="stock">
                         <p>In Stock</p>
                     </div>
@@ -78,77 +142,6 @@ onBeforeMount(() => {
     </main>
 </template>
 
-
-<script >
-
-export default {
-
-    
-    data() {
-        return {
-            sizeOpen: false,
-            showDropdown: false,
-            erased: "None",
-            defaultText: "Größe",
-            defaultText1: "Größe",
-            reviewOpen: true,
-            writeReview: false,
-            sizes: ["M", "L", "S"],
-            
-        }
-    },
-
-    computed:{
-        productTotal(){
-            this.$store.getters.productQuantity(this.product)
-        }
-
-    },
-
-    methods: {
-        choosedSize(size){
-            product.choosedSize = size;
-            
-        },
-
-        addToCart(){
-            this.$store.commit('addToCart', this.product)
-        },
-
-
-
-        openSizes() {
-            this.sizeOpen = !this.sizeOpen;
-            console.log(this.sizeOpen)
-        },
-
-        chooseSize(size){
-            this.defaultText = size;
-            this.sizeOpen = false;
-
-
-        },
-
-        openReview(){
-            this.reviewOpen =true
-            this.writeReview = false
-        },
-      
-        openWriteReview(){
-            this.writeReview = true
-            this.reviewOpen = false
-            console.log(this.writeReview)
-        },
-      
-
-
-
-    }
-}
-
-
-
-</script>
 
 <style scoped>
 * {

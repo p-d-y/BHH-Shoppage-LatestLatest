@@ -4,11 +4,8 @@
         <div class="cointainer">
 
             <WarenkorbView @click="router.push(`/product/${product._id.$oid}`)" v-for="product in products" :key="product" 
-                :product="product"/>
+            :product="product"/>
         </div>
-              
-            
-
         
         <div class="topBarBottom"></div>
 
@@ -16,9 +13,9 @@
 </template>
 
 
-<script setup> 
+<script setup>
+
 import { useRouter } from "vue-router";
-import {ref, onBeforeMount} from "vue"
 
 const router = useRouter()
 
@@ -33,40 +30,19 @@ export default{
     data(){
         return{
             product: "",
-            products: []
+            products: [],
         }
     },
     mounted(){
-        fetch('http://127.0.0.1:7777/api/product')
-        .then(res => res.json())
-        .then(data => this.products = data)
-        .catch(err => console.log(err))
+        this.api_get_products()
     },
 
     methods:{
         api_get_products(){
-            this.responseAvailable = false;
-            fetch("http://127.0.0.1:7777/api/product", {
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "jokes-database.p.rapidapi.com",
-                    "x-rapidapi-key": this.apiKey
-                }
-            })
-            .then(response => { 
-                if(response.ok){
-                    return response.json()    
-                } else{
-                    alert("Server returned " + response.status + " : " + response.statusText);
-                }                
-            })
-            .then(response => {
-                this.result = response.body;
-                this.responseAvailable = true;
-            })
-            .catch(err => {
-                console.log(err);
-            })
+            fetch('https://api.bhhshop.bembel.dev/api/product')
+            .then(res => res.json())
+            .then(data => this.products = data)
+            .catch(err => console.log(err))
         }
     }
 }
