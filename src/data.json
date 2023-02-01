@@ -1,10 +1,8 @@
 [
     {
         "id": 1,
-        "name": "BHH T-shirt in Blau",
-        "inStockM": true,
-        "inStockS": true,
-        "inStockL": false,
+        "name": "BHH T-shirt in grün",
+        "choosedSize": "",
         "color": "Blau",
         "preis": "25€",
         "url":"../src/assets/t-shirtBlau.jpg"
@@ -12,9 +10,7 @@
     {
         "id": 2,
         "name": "BHH T-shirt in DunkelGrün  ",
-        "inStockM": false,
-        "inStockS": true,
-        "inStockL": false,
+        "choosedSize": "",
         "color": "Dunkel Grün",
         "preis": "59,99€",
         "url":"../src/assets/t-shirtDunkelGrün.jpg"
@@ -23,62 +19,58 @@
     },
     {
         "id": 3,
-        "name": "BHH T-shirt in Weiß",
-        "inStockM": true,
-        "inStockS": false,
-        "inStockL": true,
-        "color": "Weiß",
+        "name": "BHH T-shirt",
+        "choosedSize": "",
+        "color": "Gelb",
         "preis": "39,99€",
-        "url":"../src/assets/t-shirtWeiß.jpg"
+        "url":"../src/assets/gelb.jpg"
     },
     {
         "id": 4,
         "name": "BHH T-Shirt",
-        "inStockM": true,
-        "inStockS": true,
-        "inStockL": true,
-        "color": "Red",
+        "choosedSize": "",
+        "color": "Blau",
         "preis": "15,99€",
-        "url":"../src/assets/hoodie8.jpg"
+        "url":"../src/assets/babyblau.jpg"
     },
     {
         "id": 5,
-        "name": "BHH Black Hoodie ",
-        "inStockM": true,
-        "inStockS": false,
-        "inStockL": false,
-        "color": "Black",
+        "name": "BHH Rot Hoodie ",
+        "choosedSize": "",
+        "color": "Rot",
         "preis": "59,99€",
-        "url":"../src/assets/hoodie2.jpg"
+        "url":"../src/assets/hoodieweinrot.jpg"
     },
     {
         "id": 6,
-        "name": "BHH Blue Hoodie",
-        "inStockM": true,
-        "inStockS": true,
-        "inStockL": true,
-        "color": "Blue",
+        "name": "BHH White Hoodie",
+        "choosedSize": "",
+        "color": "Weiß",
         "preis": "59,99€",
-        "url":"../src/assets/hoodie3.jpg"
+        "url":"../src/assets/hoodieweiß.jpg"
     },
     {
         "id": 7,
-        "name": "BHH Loose Sweater",
-        "inStockM": true,
-        "inStockS": false,
-        "inStockL": false,
-        "color": "Orange",
+        "name": "BHH Black Hoodie",
+        "choosedSize": "",
+        "color": "Black",
         "preis": "35,45€",
-        "url":"../src/assets/hoodie6.jpg"
+        "url":"../src/assets/hoodieschwarz.jpg"
     },
     {
         "id": 8,
-        "name": "BHH Brown Hoodie",
-        "inStockM": true,
-        "inStockS": false,
-        "inStockL": false,
-        "color": "Brown",
+        "name": "BHH Blue Polo",
+        "choosedSize": "",
+        "color": "Blau",
         "preis": "59,99€",
-        "url":"../src/assets/hoodie7.jpg"
+        "url":"../src/assets/poloblau.jpg"
+    },
+    {
+        "id": 8,
+        "name": "BHH White Polo",
+        "choosedSize": "",
+        "color": "Weiß",
+        "preis": "59,99€",
+        "url":"../src/assets/poloweiß.jpg"
     }
 ]

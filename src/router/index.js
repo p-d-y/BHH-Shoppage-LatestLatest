@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ShopView from "../views/ShopView.vue"
 import ContentProfile from "../views/ContentProfile.vue"
-import ProductView from "../views/ProductView.vue"
+import ProductView from "../views/ProductView.vue" 
+import WarenkorbView from "../views/WarenKorbView.vue"
 
 
 const router = createRouter({
@@ -28,7 +29,15 @@ const router = createRouter({
       name: 'product',
       component: ProductView
 
+    },
+
+    {
+      path: '/warenkorb',
+      name: 'warenkorb',
+      component: WarenkorbView
+
     }
+
 
   ]
 })

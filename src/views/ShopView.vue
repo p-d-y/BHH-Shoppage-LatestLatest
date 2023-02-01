@@ -2,16 +2,14 @@
     <main>
         <div class="topBar">Neuheiten</div>
         <div class="cointainer">
-            <div class="products" @click="router.push(`/product/${product.id}`)" v-for="product in products" :key="product">
-                <img :src="product.url" alt="">
-                <div class="bottom">
 
-                    <p>{{ product.name }}</p>
-                    <p>{{ product.preis }}</p>
-                </div>
-            </div>
-
+            <WarenkorbView @click="router.push(`/product/${product.id}`)" v-for="product in products" :key="product" 
+                :product="product"/>
         </div>
+              
+            
+
+        
         <div class="topBarBottom"></div>
 
     </main>
@@ -30,6 +28,22 @@ const router = useRouter()
 
 </script>
 
+<script> 
+import WarenkorbView from "../components/WarenkorbView.vue"
+
+
+
+export default{
+    components:{WarenkorbView},
+    data(){
+        return{
+            product: ""
+        }
+    }
+}
+
+</script>
+
 
 <style scoped>
 * {
@@ -39,13 +53,14 @@ const router = useRouter()
     
 }
 .topBar{
-    background-color: rgba(245,245,245,255);
+    background-color: rgba(0,143,163,255);
     padding: 30px;
     font-weight: bolder;
     text-align: center;
     font-size: 23px;
     font-family: century Gothic;
-    border-top: black 5px solid;
+    /* border-top: black 5px solid; */
+    box-shadow: 1px 1px 10px;
     
 }
 
@@ -66,7 +81,7 @@ const router = useRouter()
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 
 }
 
@@ -80,12 +95,13 @@ const router = useRouter()
 }
 
 .products:hover {
-    box-shadow: 0 0 15px;
+    box-shadow: 0 0 15px
 }
 
 .products img {
     height: 80%;
     width: 100%;
+    
 }
 
 .products p {

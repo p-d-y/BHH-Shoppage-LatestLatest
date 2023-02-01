@@ -1,26 +1,43 @@
 <template>
 
-    <div class="frame">
-
-        <div class="box">
-            <h1 class="laas">{{ uberschrift }}</h1>
-            <div class="loos">
-
-                <input type="text" id="inputstuff" size="50" v-model="input" />
-                <button id="click" @click="addGoal()">add Goal</button>
-                <button id="click" @click="deleteGoal()">delete Goal</button>
-            </div>
-            <ul>
-                <li id="ldafd" v-for="goal in goals" v-bind:key="goal" >{{ goal }}</li>
-
-
-            </ul>
-
-
-
-        </div>
+ <div class="uberschr">
+        <h1>Max Mustermann</h1>
+    <p>max.mustermann@gmail.com</p>
     </div>
 
+
+ <div class="frame">
+
+    <div>
+        <p>Username:</p> 
+        <input type="text" name="" id="" value="MaxMuster">
+    </div>
+
+    <div>
+        <p>Vorname:</p> 
+        <input type="text" name="" id="" value="MaxMuster">
+    </div>
+
+    <div>
+        <p>Nachname:</p> 
+        <input type="text" name="" id="" value="MaxMuster">
+    </div>
+
+    <div>
+        <p>E-mail:</p> 
+        <input type="text" name="" id="" value="MaxMuster">
+    </div>
+
+    <div>
+        <p>Straße + H.Nr:</p> 
+        <input type="text" name="" id="" value="MaxMuster">
+    </div>
+
+    <div>
+        <p>Ort:</p> 
+        <input type="text" name="" id="" value="MaxMuster">
+    </div>
+   </div>
 
 </template>
 
@@ -55,61 +72,46 @@ export default {
 
 
 <style scoped>
-.laas {
-    text-align: center;
-    margin: 15px 0px;
-    font-size: 50px;
+*{
+     /* font-size: 15px; */
     font-family: century gothic;
-    text-decoration-line: underline;
-    text-decoration: dashed;
+}
+
+.uberschr{
+    text-align: center;
+    font-size: 15px;
+     background-color: rgba(0,143,163,255);
+     padding: 18px;
+     box-shadow: 1px 1px 10px;;
 
 }
 
-.frame {
+
+.frame
+{
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 0 5px;
+    padding: 25px;
+    margin-top: 15px;
+}
+.frame div{
+    /* background-color: aqua; */
+    margin: 25px 0;
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-
-}
-
-.box {
-    border: 3px black solid;
-    width: 1050px;
-    height: 550px;
-    margin-top: 250px;
-    box-shadow: 5px 2px 15px;
-    overflow: scroll;
-}
-
-.loos {
-    text-align: center;
-
-}
-
-#inputstuff {
-    height: 30px;
+    justify-content:space-around;
     font-size: 20px;
 
+    
 }
 
-#click {
-    height: 30px;
-    margin: 0px 50px;
-    font-size: 20px;
+input{
+    width: 300px;
 }
 
-ul li {
-    border: solid black 1px;
-    padding: 15px;
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 25px;
-    font-family: century gothic;
-    font-weight: bolder;
-    margin: 25px 10px;
-    background-color: white;
 
-}
+
+
+
 </style>

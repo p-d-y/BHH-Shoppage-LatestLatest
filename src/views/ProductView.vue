@@ -2,6 +2,7 @@
 import {useRoute} from 'vue-router'
 import {ref, onBeforeMount} from "vue"
 import products from "../data.json"
+import {RouterLink} from "vue-router"
 
 
 
@@ -13,7 +14,9 @@ onBeforeMount(() => {
      product.value = products.find(p => p.id === parseInt(id))
 })
 
-console.log(route.params)
+
+
+
 </script>
 
 
@@ -38,11 +41,14 @@ console.log(route.params)
 
                         <div class="größe" @click="openSizes()">{{ defaultText }}</div>
                         <ul class="größeUl" v-if="sizeOpen == true">
-                            <li class="größeIl" v-for="size in sizes" :key="size" @click="chooseSize(size)">  {{ size }}</li>
+                            <li class="größeIl" v-for="size in sizes" :key="size" @click="chooseSize(size) , choosedSize(size)" >  {{ size }}</li>
                         </ul>
                     </div>
                     <p style="margin: 15px 0">{{ product.preis + "€" }}</p>
                     <p>{{ product.color }}</p>
+                    <div @click="addToCart()" style="border: solid 1px black;" >Click Me</div>
+                    <p>Menge: {{}}</p>
+                    <RouterLink to="/Warenkorb" class="inWarenkorb">In den Warenkorb</RouterLink>
 
                 </div>
             </div>
@@ -76,6 +82,8 @@ console.log(route.params)
 <script >
 
 export default {
+
+    
     data() {
         return {
             sizeOpen: false,
@@ -85,11 +93,30 @@ export default {
             defaultText1: "Größe",
             reviewOpen: true,
             writeReview: false,
-            sizes: ["M", "L", "S"]
+            sizes: ["M", "L", "S"],
+            
         }
     },
 
+    computed:{
+        productTotal(){
+            this.$store.getters.productQuantity(this.product)
+        }
+
+    },
+
     methods: {
+        choosedSize(size){
+            product.choosedSize = size;
+            
+        },
+
+        addToCart(){
+            this.$store.commit('addToCart', this.product)
+        },
+
+
+
         openSizes() {
             this.sizeOpen = !this.sizeOpen;
             console.log(this.sizeOpen)
@@ -133,20 +160,21 @@ export default {
 }
 
 .topBar{
-    background-color: rgba(245,245,245,255);
+    background-color: rgba(0,143,163,255);
     padding: 30px;
     font-weight: bolder;
     text-align: center;
     font-size: 23px;
     font-family: century Gothic;
-    border-top: black 5px solid;
+    /* border-top: black 5px solid; */
+    box-shadow: 1px 1px 10px;
     
 }
 
 .container {
     width: 60%;
     margin: auto;
-    margin-top: 75px;
+    margin-top: 50px;
     height: auto;
     /* border: solid black 1px; */
     display: flex;
@@ -166,8 +194,8 @@ export default {
 .productContainer img {
     height: 100%;
     max-width: 440px;
-    /* border: solid black 1px; */
-    box-shadow: 1px 1px 2px;
+    /* border: solid black 30px; */
+    box-shadow: 0.5px 0.5px 10px;
 
 }
 
@@ -237,6 +265,21 @@ ul li {
     width: 50px;
     box-shadow: 0 0 3px;
 }
+
+
+
+.inWarenkorb{
+    padding: 10px;
+    margin-top: auto;
+    background-color: rgba(0,143,163,255);
+    cursor: pointer;
+    border: none;
+    
+}
+
+
+
+
 
 .reviewNav{
     display: flex;

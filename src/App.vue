@@ -25,10 +25,10 @@ import TopInfo from "./components/TopInfo.vue"
             <div class="navdiv">
                 
                 <ul class="ulN">
-                    <li class="liN"><RouterLink to="/" class="normal"  @click="activeNavBarHome()" style="cursor:pointer"  :class="{active: isActiveHome==true}" >Home</RouterLink></li>
+                    <li class="liN"><RouterLink to="/" class="normal"   style="cursor:pointer"  :class="{active: $route.name==='home'}" >Home</RouterLink></li>
                     <li class="liN">
-                        <RouterLink to="/shop" class="normal" @click="activeNavBarShop()" style="cursor:pointer"  :class="{active: isActiveShop==true}">Shop</RouterLink></li>
-                    <li class="liN">    <RouterLink to="/profile" class="normal" @click="activeNavBarProfile()" style="cursor:pointer"  :class="{active: isActiveProfile==true}">Profile</RouterLink></li>
+                        <RouterLink to="/shop" class="normal" style="cursor:pointer"  :class="{active: $route.name==='shop'}">Shop</RouterLink></li>
+                    <li class="liN">    <RouterLink to="/profile" class="normal" style="cursor:pointer"  :class="{active: $route.name==='profile'}">Profile</RouterLink></li>
                     <li class="liN"><a  class="normal" :class="{active: openProduct==true}" @click="$emit('openProduct')" style="cursor:pointer">Contact</a></li>
                     <li class="liN"><a class="normal" v-bind:href="test">{{ navFive }}</a></li>
                     

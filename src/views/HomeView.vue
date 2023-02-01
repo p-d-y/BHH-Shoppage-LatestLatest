@@ -30,6 +30,7 @@
 
 
       <footer>
+
           
 
 
@@ -126,9 +127,11 @@ export default {
   font-weight: bolder;
   font-size: 25px;
   color: black;
-  background-color: rgba(245,245,245,255);
+  
   padding: 50px;
 
+    background-color: rgba(242, 230, 230, 0.798);
+  box-shadow: 1px 1px 10px;
 }
 
 
@@ -137,51 +140,8 @@ export default {
 .content{
  
   width: 100%;
-  background-color: rgba(212,212,212,255); 
 }
 
-.ProductFrame{
-  margin: 70px 0px;
-  
-  width: 100%;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(212,212,212,255); 
-
-}
-
-.Product{
-
-  height: 600px;
-  width: 400px;
-  box-shadow: 5px 5px 15px;
-  margin: 30px 0px;
-  background-color: rgba(212,212,212,255); 
-}
-
-
-
-
-.Producttxt p{
- 
-  height: 60px;
-  width: 100%;
-  font-family: century gothic;
-  font-size: 25px;
-  font-weight:bolder;
-  text-align: center;
-  background-color: white;
-  box-shadow: 5px 5px 20px;
-
-
-  
-}
-
-.Productimg{
-  width: 100%;
-  
-}
 
 
 
