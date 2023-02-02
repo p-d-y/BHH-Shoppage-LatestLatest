@@ -33,7 +33,7 @@ export default{
             products: [],
         }
     },
-    mounted(){
+    beforeMount(){
         this.api_get_products()
     },
 

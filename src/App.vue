@@ -59,8 +59,8 @@ export default{
             window.localStorage.setItem('arr', data);
             console.log(JSON.parse(window.localStorage.getItem('arr')))
         },
-        populate(){
-            fetch("https://api.bhhshop.bembel.dev/api/populate", {
+        dump(){
+            fetch("https://api.bhhshop.bembel.dev/api/dump", {
                 "method": "POST",
                 "headers": {
                     "Content-Type": 'json'

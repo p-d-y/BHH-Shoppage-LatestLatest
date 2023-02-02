@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ShopView from "../views/ShopView.vue"
 import ContentProfile from "../views/ContentProfile.vue"
 import ProductView from "../views/ProductView.vue" 
-import WarenkorbView from "../views/WarenKorbView.vue"
+import WarenkorbView from "../views/warenkorb_2view.vue"
 
 
 const router = createRouter({
@@ -32,7 +32,7 @@ const router = createRouter({
     },
 
     {
-      path: '/warenkorb',
+      path: '/warenkorb/:id',
       name: 'warenkorb',
       component: WarenkorbView
 

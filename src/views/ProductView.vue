@@ -1,7 +1,15 @@
 <script setup>
 
-import {useRoute} from 'vue-router'
+import { useRouter } from 'vue-router'
 import {RouterLink} from "vue-router"
+
+const router = useRouter()
+
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'EUR'
+});
+
 
 </script>
 
@@ -21,22 +29,28 @@ export default {
             writeReview: false,
             sizes: ["M", "L", "S"],
             products: [],
-            product: "",
-            id: ""
-            
+            Product: "",
+            id: "",
+            in_stock: "",
+            cart_id: "",
+            amount: 1
         }
     },
     computed:{
         productTotal(){
-            this.$store.getters.productQuantity(this.product)
+            this.$store.getters.productQuantity(this.Product)
         }
     },
-    mounted(){
+    beforeMount(){
         const route = useRoute()
         this.id= route.params.id
         this.api_get_product()
     },
-    methods: {
+    methods: 
+    {
+        test(stuff){
+            console.log(stuff)
+        },
         api_get_product(){
             fetch('https://api.bhhshop.bembel.dev/api/product/id=' + this.id)
                 .then(res => res.json())
@@ -47,11 +61,33 @@ export default {
             product.choosedSize = size;
             
         },
-
-        addToCart(){
-            this.$store.commit('addToCart', this.product)
+        api_add_cart(ID){
+            fetch('https://api.bhhshop.bembel.dev/api/cart/add/' + ID + "/" + this.amount)
+                .then(res => res.text())
+                .then(data => this.cart_id = data.split(":")[1])
+                .catch(err => console.log(err))
+        },
+        check_stock(){
+            if(this.Product.amount > 0){
+                this.in_stock = "In Stock"
+            }
+            else{
+                this.in_stock = "Out of Stock"
+            }
+            return this.in_stock
         },
 
+        addProduct(){
+            this.amount++
+        },
+
+        reduceProduct(){
+            if(this.amount>=1){
+                this.amount--
+
+            }
+
+        },
 
 
         openSizes() {
@@ -62,8 +98,6 @@ export default {
         chooseSize(size){
             this.defaultText = size;
             this.sizeOpen = false;
-
-
         },
 
         openReview(){
@@ -86,19 +120,21 @@ export default {
 
 <template>
     <main>
+        <div style= "display: none;">
+            {{ Product = JSON.parse(JSON.stringify(products))[0] }}
+        </div>
         <div class="topBar">BHH-Shop</div>
         <div class="container">
             <div class="productContainer">
-                <img :src="product.url" alt="">
+                <!-- <img :src="product.url" alt=""> -->
                 <div class="productInfo">
-                    <h1> {{ products[0] }}  </h1>
+                    <h1> {{ Product.product }}  </h1>
                     <div class="stock">
-                        <p>In Stock</p>
+                        <p>{{ check_stock() }}</p>
                     </div>
                     <ul>
-                        <li>Eigenschaft 1</li>
-                        <li>Eigenschaft 2</li>
-                        <li>Eigenschaft 3</li>
+                        <li>{{ Product.type }}</li>
+                        <li>{{ Product.color }}</li>
 
                     </ul>
                     <div>
@@ -108,11 +144,16 @@ export default {
                             <li class="größeIl" v-for="size in sizes" :key="size" @click="chooseSize(size) , choosedSize(size)" >  {{ size }}</li>
                         </ul>
                     </div>
-                    <p style="margin: 15px 0">{{ product.preis + "€" }}</p>
-                    <p>{{ product.color }}</p>
-                    <div @click="addToCart()" style="border: solid 1px black;" >Click Me</div>
-                    <p>Menge: {{}}</p>
-                    <RouterLink to="/Warenkorb" class="inWarenkorb">In den Warenkorb</RouterLink>
+                    <p style="margin: 15px 0">{{ formatter.format(Product.price) }}</p>
+                    <p>Menge: {{ amount }}</p><div class="buttons">
+
+                    <div @click="addProduct()" class="button" >+</div>
+                    <div @click="reduceProduct()" class="button" >-</div>
+                    </div>
+                    <div>
+                        <Button @click="api_add_cart(Product._id.$oid), router.push('/warenkorb/${cart_id}'), api_add_image(Product._id.$oid)"> Warenkorb
+                        </Button>
+                    </div>
 
                 </div>
             </div>
@@ -150,6 +191,25 @@ export default {
     font-size: 23px;
     font-family: century Gothic;
 
+}
+
+.buttons{
+    display: flex;
+}
+
+.button:hover {
+    box-shadow: 0 0 6px;
+}
+
+
+.button{
+    box-shadow: 0 0 3px;
+    border: solid 1px black;
+    background-color: white;
+    width: 25px;
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .topBar{
