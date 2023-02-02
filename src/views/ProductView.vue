@@ -16,6 +16,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 <script >
 
 import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 export default {
     data() {
@@ -47,9 +48,9 @@ export default {
         this.api_get_product()
     },
     methods: 
-    {
-        test(stuff){
-            console.log(stuff)
+    {   
+        test(data){
+        console.log(data)
         },
         api_get_product(){
             fetch('https://api.bhhshop.bembel.dev/api/product/id=' + this.id)
@@ -61,11 +62,21 @@ export default {
             product.choosedSize = size;
             
         },
-        api_add_cart(ID){
-            fetch('https://api.bhhshop.bembel.dev/api/cart/add/' + ID + "/" + this.amount)
-                .then(res => res.text())
-                .then(data => this.cart_id = data.split(":")[1])
-                .catch(err => console.log(err))
+        add_cart(ID){
+            return new Promise(function(resolve, reject) { fetch('https://api.bhhshop.bembel.dev/api/cart/add/' + ID + "/1")
+                .then(result => result.text())
+                .then(data => {var cart_id = data.split(":")[1];
+                console.log('Processing Request');
+                resolve(cart_id);
+            },
+                (error) => {
+                reject(error);
+            }
+                );});
+        },
+        async api_add_cart(ID){
+            var result = await this.add_cart(ID)
+            useRouter().push(`/warenkorb/${result}`) 
         },
         check_stock(){
             if(this.Product.amount > 0){
@@ -76,20 +87,15 @@ export default {
             }
             return this.in_stock
         },
-
         addProduct(){
             this.amount++
         },
-
         reduceProduct(){
             if(this.amount>=1){
                 this.amount--
 
             }
-
         },
-
-
         openSizes() {
             this.sizeOpen = !this.sizeOpen;
             console.log(this.sizeOpen)
@@ -151,7 +157,7 @@ export default {
                     <div @click="reduceProduct()" class="button" >-</div>
                     </div>
                     <div>
-                        <Button @click="api_add_cart(Product._id.$oid), router.push('/warenkorb/${cart_id}'), api_add_image(Product._id.$oid)"> Warenkorb
+                        <Button @click="api_add_cart(Product._id.$oid)"> Warenkorb 
                         </Button>
                     </div>
 
