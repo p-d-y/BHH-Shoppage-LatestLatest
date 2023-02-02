@@ -132,7 +132,7 @@ export default {
         <div class="topBar">BHH-Shop</div>
         <div class="container">
             <div class="productContainer">
-                <!-- <img :src="product.url" alt=""> -->
+                <img :src="product.url" alt="">
                 <div class="productInfo">
                     <h1> {{ Product.product }}  </h1>
                     <div class="stock">
